@@ -1,0 +1,88 @@
+$padding-generic: 0 10px;
+$transition-generic: 250ms all ease-in-out;
+
+.App {
+  & h1 {
+    text-align: center;
+  }
+}
+// Navbar Component Style
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-generic;
+  margin-bottom: 10px;
+  & div {
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #e6e6e6;
+    transition: $transition-generic;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(223, 223, 223);
+    }
+  }
+}
+// Todos Component Style
+.todos {
+  padding: $padding-generic;
+  & .todo-item {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+    transition: $transition-generic;
+    &:hover {
+      background-color: rgb(211, 211, 211);
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & button {
+      border: none;
+      border-radius: 5px;
+      padding: 7px 10px;
+      background-color: rgb(202, 0, 0);
+      color: whitesmoke;
+      cursor: pointer;
+      transition: $transition-generic;
+      &:hover {
+        background-color: rgb(148, 1, 1);
+      }
+    }
+    & span {
+      & input {
+        cursor: pointer;
+      }
+    }
+
+    &.active {
+      opacity: 0.6;
+      & span {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+// Todo Form Component Style
+.todo-form {
+  display: flex;
+  align-items: stretch;
+  padding: $padding-generic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  & input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 22px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
